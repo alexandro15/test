@@ -1,17 +1,35 @@
 <!doctype html>
 <html>
-<title>Prova app mobile</title>
+<title>app circonferenza</title>
 <head>
 <link rel=stylesheet href=http://getskeleton.com/dist/css/normalize.css>
-<link rel=stylesheet href=http://getskeleton.com/dist/css/skeleton.css>
+<link rel=stylesheet href=http://getskeleton.com/dist/css/skeleton.css>ù
+<script src=js/funzioni.js></script>
 </head>
 <body>
+	<img src=cerchio.png width=650px>
 	<div class=container style="margin:25%;">
-	  <div class=row>
+  <div class=row>
+            <div class="twelve columns"> 
+	        <h2>Calcolo area e Circonferenza</h2>
+	    </div>
+	   </div>
+            <div class=row>
 	    <div class="twelve columns">
-		  <button class=button onclick="alert ('ciao!')">
-	  Cliccami
+	<form name=circonferenza>
+	<label for=raggio>Misura del raggio</label>
+	<input type=number name=r min=0.001 step=0.001 required class=u-full-width><br>
+		  <button class=button onclick="calcolocirconferenza()" type=button>
+	  Circonferenza
 		  </button>
+		  <button class=button onclick="calcoloarea()" type=button>
+	  Area
+		  </button>
+		  <input type=reset value=cancella class=button>
+		  </button>
+	</form>
+	<p id=area></p>
+	<p id=misuracirconferenza></p>
 	    </div>
           </div>
          </div>
